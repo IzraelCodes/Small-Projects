@@ -6,6 +6,10 @@ public class WeightConverter {
 		
 		Scanner UserInput = new Scanner(System.in);
 		
+		double weight;
+		double newWeight;
+		int choice;
+		
 		System.out.println("Welcome to the Weight conversion calculator");
 		
 	
