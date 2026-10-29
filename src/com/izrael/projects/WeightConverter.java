@@ -17,21 +17,27 @@ public class WeightConverter {
 		System.out.print("Choose and option: ");
 		choice = UserInput.nextInt();
 		
-		// Option 1 convert lbs to kgs
+		
 		if(choice == 1) {
 			System.out.print("Enter your weight in LBS and it will be converted to Kgs: ");
 			weight = UserInput.nextDouble();
 			
 			newWeight = weight * 0.453592;
-			System.out.printf("The new weight is: %.2f", newWeight);
+			System.out.printf("The new weight in kgs is: %.2f", newWeight);
 		}
 		
-		// Option 2 convert kgs to lbs
-		if(choice == 2) {
+		
+		else if(choice == 2) {
 			System.out.println("Enter your weight in KGs and it will be converted to Lbs: ");
 			weight = UserInput.nextDouble();
+			
+			newWeight = weight * 2.20462;
+			System.out.printf("The new weight in lbs is: %.2f", newWeight);
 		}
-		// else print not a valid choice 
+		else {
+			System.out.println("That was not a valid choice mate.");
+		}
+		
 		
 		
 		UserInput.close();
