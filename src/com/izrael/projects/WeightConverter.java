@@ -4,9 +4,11 @@ public class WeightConverter {
 
 	public static void main(String[] args) {
 		
-		//Declare variables
+		Scanner UserInput = new Scanner(System.in);
 		
-		// Welcome messages
+		System.out.println("Welcome to the Weight conversion calculator");
+		
+	
 		
 		// Prompt for user Input
 		
@@ -15,7 +17,9 @@ public class WeightConverter {
 		// Option 2 convert kgs to lbs
 		
 		// else print not a valid choice 
-
+		
+		
+		UserInput.close();
 	}
 
 }
