@@ -25,7 +25,13 @@ public class CalculatorProgram {
 			case '+' -> result = num1 + num2;
 			case '-' -> result = num1 - num2;
 			case '*' -> result = num1 * num2;
-			case '/' -> result = num1 / num2;
+			case '/' -> {
+				if(num2 == 0) {
+					System.out.println("Can not divide by zero!");
+				} else {
+					result = num1 / num2;
+				}
+			}
 			case '^' -> result = Math.pow(num1, num2);
 			default  -> System.out.println("Enter a valid operator.");
 		}
