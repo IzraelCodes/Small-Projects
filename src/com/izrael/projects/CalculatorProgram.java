@@ -11,6 +11,7 @@ public class CalculatorProgram {
 		double num2;
 		char operator;
 		double result = 0;
+		boolean validOperation = true;
 		
 		System.out.print("Enter the first number:");
 		num1 = UserInput.nextDouble();
@@ -25,11 +26,24 @@ public class CalculatorProgram {
 			case '+' -> result = num1 + num2;
 			case '-' -> result = num1 - num2;
 			case '*' -> result = num1 * num2;
-			case '/' -> result = (num2 == 0)? 0 : num1 / num2;
+			case '/' ->  {
+					if(num2 == 0) {
+						System.out.println("You can't divide by 0");
+						result = 0;
+						validOperation = false;
+					}else {
+						result = num1 / num2;
+					}
+			}
 			case '^' -> result = Math.pow(num1, num2);
-			default  -> System.out.println("Enter a valid operator.");
+			default  -> {
+			System.out.println("Invalid operator!");
+			validOperation = false;
+			}
 		}
-		System.out.println("You picked this operator " + operator + " and the result is: " + result);
+		if(validOperation) {
+			System.out.println("You picked this operator " + operator + " and the result is: " + result);
+		}
 		
 		UserInput.close();
 	}
